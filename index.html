@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#06131d" />
+  <meta name="description" content="All Tools Rimuru — premium all-in-one tools hub by Fydz XzL." />
+  <title>All Tools Rimuru — Fydz XzL</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <section class="auth-screen" id="authScreen" aria-hidden="false">
+    <div class="auth-glow auth-glow-a"></div><div class="auth-glow auth-glow-b"></div>
+    <div class="auth-card">
+      <button class="auth-close" id="authClose" type="button" aria-label="Tutup">×</button>
+      <div class="auth-brand"><span class="auth-logo">R</span><div><b>ALL TOOLS</b><small>RIMURU CORE</small></div></div>
+      <div class="auth-kicker">PRIVATE TOOLKIT ACCESS</div>
+      <h1 id="authTitle">Welcome back.</h1>
+      <p id="authSubtitle">Login dengan akun Rimuru yang kamu buat di perangkat ini.</p>
+      <div class="auth-tabs"><button class="active" id="authLoginTab" type="button">LOGIN</button><button id="authRegisterTab" type="button">DAFTAR</button></div>
+      <form id="authForm" autocomplete="on">
+        <label class="auth-field"><span>USERNAME</span><input id="authName" name="username" autocomplete="username" maxlength="30" placeholder="Masukkan nama" required></label>
+        <label class="auth-field"><span>PASSWORD</span><input id="authPassword" name="password" type="password" autocomplete="current-password" minlength="4" maxlength="64" placeholder="Masukkan password" required></label>
+        <button class="auth-submit" id="authSubmit" type="submit"><span id="authSubmitText">MASUK</span><b>→</b></button>
+      </form>
+      <div class="auth-message" id="authMessage" role="status"></div>
+      <div class="auth-note"><i></i> Akun ini tersimpan lokal di browser ini. Tidak memakai Google atau akun pihak ketiga.</div>
+    </div>
+  </section>
+  <div class="page-loader" id="pageLoader" aria-hidden="false">
+    <div class="loader-aura"></div>
+    <div class="loader-orbit loader-orbit-a"></div>
+    <div class="loader-orbit loader-orbit-b"></div>
+    <div class="loader-core"><span>R</span></div>
+    <div class="loader-brand">
+      <strong>ALL TOOLS <span>RIMURU</span></strong>
+      <small>INITIALIZING RIMURU CORE</small>
+    </div>
+    <div class="loader-progress"><i id="loaderProgress"></i></div>
+    <div class="loader-status"><span class="loader-dot"></span><span id="loaderStatus">Preparing interface...</span><b id="loaderPercent">0%</b></div>
+  </div>
+  <div class="ambient ambient-a"></div>
+  <div class="ambient ambient-b"></div>
+  <div class="grid-overlay"></div><div class="noise"></div>
+
+  <header class="topbar">
+    <a class="brand" href="#">
+      <span class="brand-mark">R</span>
+      <span>
+        <strong>ALL TOOLS</strong>
+        <small>RIMURU</small>
+      </span>
+    </a>
+
+    <nav class="desktop-nav">
+      <a href="#tools">Tools</a>
+      <a href="#categories">Categories</a>
+      <a href="#status">Status</a>
+    </nav>
+
+    <div class="top-actions">
+      <button class="music-toggle" id="musicToggle" type="button" aria-label="Nyalakan musik" aria-pressed="false"><span id="musicIcon">♪</span><span id="musicLabel">Music</span></button><button class="theme-btn" id="themeBtn" type="button" aria-label="Pilih warna">◉</button>
+      <button class="menu-btn" id="menuBtn" aria-label="Buka Menu Informasi" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+
+  <div class="theme-popover" id="themePopover" aria-hidden="true">
+    <div class="theme-popover-head"><div><b>Interface Color</b><small>Satu warna untuk seluruh interface</small></div><button id="themeClose" type="button">×</button></div>
+    <div class="theme-color-editor">
+      <div class="theme-color-preview" id="themeColorPreview"><span></span><div><b>Global Blue</b><small>Background • Card • Text • Button • Glow</small></div></div>
+      <label class="theme-color-picker"><span>Pilih warna utama</span><input id="customTheme" type="color" value="#3d8cff" aria-label="Pilih warna utama"></label>
+      <div class="theme-color-hint">Warna yang dipilih diterapkan ke seluruh web secara otomatis.</div>
+    </div>
+  </div>
+
+  <main>
+    <section class="hero rimuru-hero" id="home">
+      <video class="banner-video" id="bannerVideo" autoplay muted loop playsinline preload="auto" disablepictureinpicture aria-hidden="true"></video>
+      <div class="banner-shade"></div>
+      <div class="banner-particles"></div>
+
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="pulse"></span> RIMURU CORE · ONLINE</div>
+        <h1>ALL TOOLS<br><span>RIMURU</span></h1>
+        <p>
+          Semua tools dalam satu tempat — AI, downloader, music, anime, maker, image tools, developer utilities, dan lainnya — dalam satu dashboard.
+        </p>
+        <div class="developer-credit">By <strong>FydzXzL</strong></div>
+        <div class="hero-ribbon"><b>RIMURU NEXUS</b><span>•</span> FAST · SMART · ALL-IN-ONE</div>
+
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#tools">Explore Tools <span>↗</span></a>
+          <a class="btn btn-ghost" href="#status">System Status</a>
+        </div>
+      </div>
+
+      <div class="hero-core" aria-hidden="true">
+        <div class="slime-orbit slime-orbit-a"></div>
+        <div class="slime-orbit slime-orbit-b"></div>
+        <div class="slime-core">
+          <span>R</span>
+          <small>RIMURU CORE</small>
+        </div>
+      </div>
+
+      <div class="banner-credit">ALL TOOLS RIMURU <span>•</span> BY FYDZXZL</div>
+    </section>
+
+
+    <section class="search-wrap" id="tools">
+      <div class="search-box"><span class="search-accent"></span>
+        <span>⌕</span>
+        <input id="searchInput" type="search" placeholder="Cari tool, kategori, atau fitur..." autocomplete="off" />
+        <kbd>/</kbd>
+      </div>
+    </section>
+
+    <section class="category-strip" id="categories">
+      <button class="category active" data-category="all">All <b id="allCount">0</b></button>
+      <button class="category" data-category="downloader">Downloader</button>
+      <button class="category" data-category="music">Music</button>
+      <button class="category" data-category="anime">Anime</button>
+      <button class="category" data-category="image">Image</button>
+      <button class="category" data-category="maker">Maker</button>
+      <button class="category" data-category="tools">Tools</button>
+      <button class="category" data-category="developer">Developer</button>
+    </section>
+
+    <section class="section-head">
+      <div>
+        <span class="section-kicker">DISCOVER</span>
+        <h2>Featured tools</h2>
+      </div>
+      <span class="result-count" id="resultCount">0 tools</span>
+    </section>
+
+    <section class="featured-grid">
+      <article class="featured-card featured-ai">
+        <div class="featured-glow"></div>
+        <div class="tool-icon">✦</div>
+        <div class="feature-content">
+          <span class="tag">RIMURU CORE · INTELLIGENCE</span>
+          <h3>Rimuru AI</h3>
+          <p>Satu workspace AI untuk GPT, Gemini, DeepAI, YenusAI, FeelBetterBot, dan NoTrack AI.</p>
+          <button class="open-tool" data-tool="ai-playground">Open Playground <span>→</span></button>
+        </div>
+        <div class="feature-orb">RIMURU</div>
+      </article>
+
+      <article class="featured-card featured-dl">
+        <div class="tool-icon">↓</div>
+        <div class="feature-content">
+          <span class="tag">RIMURU ARSENAL · DOWNLOADER</span>
+          <h3>Downloader Hub</h3>
+          <p>YouTube, TikTok, Instagram, Facebook, Threads, Terabox, Pinterest, dan platform lainnya.</p>
+          <button class="open-tool" data-tool="vidssave">Open Downloader <span>→</span></button>
+        </div>
+        <div class="feature-orb">DL</div>
+      </article>
+    </section>
+
+    <section class="category-hub" aria-label="Quick categories">
+  <button class="hub-card" style="--hub:var(--accent)" data-hub="downloader"><i>↓</i><b>Download Hub</b><small>Multi-platform media workspace</small></button>
+  <button class="hub-card" style="--hub:var(--accent)" data-hub="image"><i>◈</i><b>Image Hub</b><small>Enhance, upload & create</small></button>
+  <button class="hub-card" style="--hub:var(--accent)" data-hub="developer"><i>⌘</i><b>Developer Hub</b><small>API, JSON & web utilities</small></button>
+</section>
+
+<section class="favorites-section" id="favoritesSection" hidden>
+  <div class="favorites-head"><div><span class="section-kicker">YOUR COLLECTION</span><h2>Favorites</h2></div><button class="favorite-clear" id="clearFavorites">Clear all</button></div>
+  <div class="favorite-list" id="favoriteList"></div>
+</section>
+
+<section class="section-head all-tools-head">
+      <div>
+        <span class="section-kicker">RIMURU LIBRARY</span>
+        <h2>All tools</h2>
+      </div>
+      <div class="view-toggle">
+        <button class="view active" data-view="grid">▦</button>
+        <button class="view" data-view="compact">☷</button>
+      </div>
+    </section>
+
+    <section class="tools-grid" id="toolGrid"></section>
+    <div class="empty-state" id="emptyState">
+      <div>⌕</div>
+      <h3>Tool tidak ditemukan</h3>
+      <p>Coba kata kunci atau kategori lain.</p>
+    </div>
+
+    <section class="recent-panel" id="recentPanel"><div class="status-title"><span class="section-kicker">QUICK ACCESS</span><div><h2>Recently used</h2><p>Tools yang terakhir kamu buka.</p></div></div><div class="recent-list" id="recentList"><span class="recent-empty">Belum ada tool yang digunakan.</span></div></section>
+
+    <section class="status-panel" id="status">
+      <div class="status-title">
+        <span class="live-dot"></span>
+        <div>
+          <span class="section-kicker">RIMURU SYSTEM</span>
+          <h2>All Tools Rimuru status</h2>
+        </div>
+      </div>
+      <div class="status-items">
+        <div><span>Web</span><b class="online">Operational</b></div>
+        <div><span>API Gateway</span><b class="online">Operational</b></div>
+        <div><span>Tools Engine</span><b class="online">Ready</b></div>
+      </div>
+    </section>
+  </main>
+
+  <section class="cta-panel"><div><span class="section-kicker">RIMURU COMMUNITY</span><h2>Tools, projects & updates.</h2><p>Ikuti developer dan dapatkan update terbaru dari ekosistem Fydz.</p></div><div class="cta-actions"><a href="https://t.me/FydSpyder" target="_blank" rel="noopener">Telegram ↗</a><a href="https://whatsapp.com/channel/0029VbDQe4V1HspzujMRGT0f" target="_blank" rel="noopener">WhatsApp ↗</a></div></section>
+
+  <footer>
+    <div class="footer-brand"><span class="brand-mark">R</span><strong>All Tools Rimuru</strong></div>
+    <p>Built & maintained by <strong>FydzXzL</strong>.</p>
+    <span class="version">v2.8.0 · Cyber Nexus Overhaul</span>
+  </footer>
+
+  <aside class="info-drawer" id="infoDrawer" aria-hidden="true">
+    <div class="drawer-backdrop" id="drawerBackdrop"></div>
+    <div class="drawer-panel">
+      <button class="drawer-close" id="drawerClose" aria-label="Tutup menu">×</button>
+      <div class="drawer-head">
+        <div class="profile-wrap">
+          <img id="devProfile" src="https://github.com/FydSpyder.png" alt="Foto profil Fydz XzL" onerror="this.style.display='none';this.nextElementSibling.style.display='grid'">
+          <div class="profile-fallback">FZL</div>
+          <span class="profile-status"></span>
+        </div>
+        <div>
+          <span class="section-kicker">DEVELOPER PROFILE</span>
+          <h2>Fydz XzL</h2>
+          <p>Builder · Scraper · Web & Bot Developer</p>
+        </div>
+      </div>
+
+      <div class="drawer-links">
+        <a class="drawer-link" href="https://t.me/FydSpyder" target="_blank" rel="noopener noreferrer">
+          <span class="drawer-icon">✈</span><span><b>Kontak Developer</b><small>@FydSpyder · Telegram</small></span><em>↗</em>
+        </a>
+        <a class="drawer-link" id="waChannelLink" href="#" target="_blank" rel="noopener noreferrer">
+          <span class="drawer-icon">◉</span><span><b>Gabung Saluran WhatsApp</b><small>Update tools, project & info terbaru</small></span><em>↗</em>
+        </a>
+      </div>
+
+      <section class="drawer-section">
+        <div class="drawer-section-title"><span>⌘</span><div><b>Toolkit</b><small>Stack yang dipakai di ekosistem Rimuru</small></div></div>
+        <div class="mini-grid">
+          <span>Node.js</span><span>JavaScript</span><span>REST API</span><span>Scraper</span><span>Baileys</span><span>Vercel</span>
+        </div>
+      </section>
+
+      <section class="drawer-section">
+        <div class="drawer-section-title"><span>♫</span><div><b>Playlist</b><small>Musik yang menemani Rimuru</small></div></div>
+        <div class="playlist-card">
+          <div class="playlist-art">R</div>
+          <div><b>Rimuru BGM</b><small>Background music · All Tools Rimuru</small></div>
+          <button id="drawerMusic" type="button" aria-label="Play Rimuru BGM">▶</button>
+        </div>
+      </section>
+
+      <section class="drawer-section">
+        <div class="drawer-section-title"><span>▣</span><div><b>Projects</b><small>Project yang sedang dibangun</small></div></div>
+        <div class="project-list">
+          <div><span class="project-dot"></span><b>All Tools Rimuru</b><small>Web tools hub</small></div>
+          <div><span class="project-dot"></span><b>Bot Kimmy MD</b><small>WhatsApp bot ecosystem</small></div>
+          <div><span class="project-dot"></span><b>Fydz Official</b><small>Developer toolkit & services</small></div>
+        </div>
+      </section>
+
+      <button class="drawer-logout" id="logoutBtn" type="button">↪ Keluar dari akun</button><div class="drawer-footer"><span>ALL TOOLS RIMURU</span><span>Fydz XzL</span></div>
+    </div>
+  </aside>
+
+  <audio id="bgMusic" preload="auto" loop>
+    <source src="/audio/rimuru-bgm.mp3" type="audio/mpeg">
+  </audio>
+
+
+  <section class="ai-workspace" id="aiWorkspace" aria-hidden="true">
+    <div class="ai-backdrop" id="aiBackdrop"></div>
+    <div class="ai-shell">
+      <aside class="ai-sidebar">
+        <div class="ai-side-brand"><span class="ai-logo">R</span><div><b>RIMURU AI</b><small>CORE INTELLIGENCE</small></div><div class="ai-side-brand-actions"><button id="aiNewChat" type="button" aria-label="Chat baru">＋</button><button id="aiSidebarClose" type="button" aria-label="Tutup panel">×</button></div></div>
+        <div class="ai-side-tabs"><button class="active">▢ Chat Biasa</button><button>⌘ Multi Chat</button></div>
+        <button class="multimind">✦ MultiMind <em>NEW</em></button>
+        <div class="ai-history-title">RIWAYAT CHAT</div>
+        <div class="ai-history" id="aiHistory"><span>Belum ada chat</span></div>
+        <div class="ai-side-bottom"><button id="aiBackTools">⌘ Kembali ke All Tools</button><button id="aiAbout">ⓘ About Rimuru AI</button><div class="ai-user"><span>FZ</span><div><b id="aiUserName">Guest</b><small><i></i> ONLINE</small></div><button>✎</button></div></div>
+      </aside>
+      <div class="ai-main">
+        <header class="ai-topbar"><button class="ai-mobile-menu" id="aiMobileMenu" aria-label="Buka panel Rimuru AI" aria-expanded="false">☰</button><button class="ai-model" id="aiModelBtn"><span class="model-dot"></span><b id="aiModelName">GPT</b><span>⌄</span></button><div class="ai-top-actions"><span class="ai-mode-pill">● Single</span><button id="aiSettings">⚙</button><button id="aiClose">×</button></div></header>
+        <div class="ai-model-menu" id="aiModelMenu"></div>
+        <div class="ai-content" id="aiContent">
+          <div class="ai-welcome" id="aiWelcome">
+            <div class="ai-welcome-logo">R</div><span class="ai-overline">RIMURU CORE · MULTI MODEL</span><h1>RIMURU <span>AI</span></h1><p>Satu ruang untuk ngobrol, coding, brainstorming, dan mencari jawaban.</p>
+            <div class="ai-suggestions"><button>✦ Apa itu AI?</button><button>⌘ Bantu coding JavaScript</button><button>＋ Buat ide project</button><button>◇ Jelaskan machine learning</button></div>
+            <div class="ai-name-card"><span>SEBELUM MULAI</span><h2>Siapa nama kamu?</h2><p>Rimuru AI akan mengingat nama ini di perangkatmu.</p><div><input id="aiNameInput" placeholder="Tulis nama kamu..." maxlength="30"><button id="aiEnter">Masuk ke Rimuru AI →</button></div></div>
+          </div>
+          <div class="ai-chat-view" id="aiChatView" hidden>
+            <div class="ai-chat-head"><div><span class="ai-overline">RIMURU AI · <b id="chatModelLabel">GPT</b></span><h2 id="aiGreeting">Halo!</h2></div><button id="aiClear">Clear chat</button></div>
+            <div class="ai-messages" id="aiMessages"></div>
+          </div>
+        </div>
+        <div class="ai-composer"><div class="ai-composer-mode"><button class="active">◯ Normal</button><button>♨ Worm</button></div><div class="ai-input-wrap"><textarea id="aiInput" rows="1" placeholder="Tanya Rimuru AI..."></textarea><button id="aiSend">➤</button></div><small>Rimuru AI dapat menggunakan model berbeda tergantung provider yang tersedia.</small></div>
+      </div>
+    </div>
+  </section>
+
+  <div class="modal" id="toolModal" aria-hidden="true">
+    <div class="modal-backdrop" data-close></div>
+    <div class="modal-card">
+      <button class="modal-close" data-close>×</button>
+      <span class="section-kicker">TOOL PREVIEW</span>
+      <div class="modal-icon" id="modalIcon">✦</div>
+      <h2 id="modalTitle">Tool</h2>
+      <p id="modalDescription">Plugin endpoint belum dipasang.</p>
+      <div id="modalBody"></div>
+      <button class="btn btn-primary full" data-close>Close</button>
+    </div>
+  </div>
+
+  <script>
+    /*
+      VIDEO BANNER:
+      Link video banner kamu diatur di app.js pada BANNER_VIDEO_URL.
+      Contoh: https://domain-kamu.com/rimuru-banner.mp4
+    */
+  </script>
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,3 @@
+Taruh file musik MP3 kamu di folder ini dengan nama: rimuru-bgm.mp3
+Contoh: audio/rimuru-bgm.mp3
+Project akan otomatis memakai file tersebut sebagai BGM.
